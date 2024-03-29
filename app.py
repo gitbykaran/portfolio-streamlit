@@ -25,6 +25,52 @@ def txt(a, b):
         st.markdown(b)
 
 
+def txt2(a, b):
+    col1, col2 = st.columns([1, 4])
+    with col1:
+        st.markdown(f'`{a}`')
+    with col2:
+        st.markdown(b)
+
+
+def txt3(a, b):
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.markdown(a)
+    with col2:
+        st.markdown(b)
+
+
+st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+
+st.markdown("""
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
+  Karandeep Singh
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link disabled" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#work-experience">Work Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#social-media">Social Media</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+""", unsafe_allow_html=True)
+
 st.markdown('''
 ## Education
 ''')
@@ -51,7 +97,7 @@ st.markdown('''
 ''', unsafe_allow_html=True)
 
 txt('**Data Science Internship**, Plasmid Innovation, Bengaluru,Karnataka',
-    'Feb-March 2024')
+    'March 2024')
 
 st.markdown('''
 - Mastered foundational data science concepts like *statistical hypothesis testing*, *feature scaling*, and *dimensionality reduction* in the initial month, establishing a strong theoretical framework for subsequent project work.
@@ -59,3 +105,39 @@ st.markdown('''
 ''')
 
 st.markdown('## Projects')
+
+txt('**End-to-End ML Project**, Student Performance Prediction', 'Jan 2024')
+
+st.markdown('''
+- Developed a machine learning model to predict student performance (e.g., grades).
+- Utilized tools like Python, `pandas`, `scikit-learn`, and visualization libraries for data manipulation, model training, and evaluation.
+- Aimed to provide educators with insights to identify at-risk students and implement early interventions, while acknowledging ethical considerations and data quality importance.                       
+''')
+
+txt('**Customer Segmentation ML Project**, Analyzing Customers', 'Feb 2024')
+
+st.markdown('''
+- Implemented customer segmentation using unsupervised machine learning techniques (e.g., `k-means clustering`) with Python libraries like `scikit-learn` and `pandas` to analyze customer data.
+- Analyzed customer data, including demographics, purchase history, and behavior, to identify distinct customer segments, utilizing data visualization tools like `matplotlib` to understand segment characteristics.
+- Aimed to improve marketing strategies by tailoring campaigns and offerings to specific customer segments, fostering increased effectiveness and personalization through targeted marketing efforts            
+''')
+
+st.markdown('''
+## Skills
+''')
+txt3('Programming', '`Python`, `R`, `C++`')
+txt3('Data processing/wrangling', '`SQL`, `pandas`, `numpy`')
+txt3('Data visualization', '`matplotlib`, `seaborn`, `plotly`, `ggplot2`')
+txt3('Machine Learning', '`scikit-learn`')
+txt3('Deep Learning', '`TensorFlow`')
+txt3('Web development', '`Flask`, `HTML`, `CSS`')
+txt3('Model deployment', '`streamlit`, `gradio`, `R Shiny`, `Heroku`, `AWS`')
+
+
+st.markdown('''
+## Social Media
+''')
+
+txt2('LinkedIn', 'https://www.linkedin.com/in/karandeepsingh3451')
+txt2('GitHub', 'https://github.com/gitbykaran')
+txt2('Resume', 'https://drive.google.com/file/d/1mB9r_Y4cOQgjTvM4gVm2X5vmEcHNrQdM/view?usp=drive_link')
