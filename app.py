@@ -3,11 +3,21 @@ import streamlit as st
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
+
 st.write('''
 # Karandeep Singh
 ##### *Portfolio*''')
 
-st.image('./image.png', width=160)
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.write(' ')
+
+with col2:
+    st.image('streamlit_portfolio/portfolio-streamlit/image.png')
+
+with col3:
+    st.write(' ')
 
 st.markdown('## Summary', unsafe_allow_html=True)
 
