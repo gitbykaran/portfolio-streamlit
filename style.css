@@ -3,13 +3,12 @@ ul {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
 }
 
 h5 {
-    text-align: center;
+    text-align: left;
 }
-
 
 
 footer {
@@ -17,5 +16,5 @@ footer {
 }
 
 header {
-    visibility: visible;
+    visibility: hidden;
 }

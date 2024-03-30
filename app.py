@@ -1,4 +1,10 @@
 import streamlit as st
+from PIL import Image
+
+st.set_page_config(
+    page_title="My-Portfolio",
+    page_icon="🧊",
+    layout="centered",)
 
 with open("style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
@@ -8,16 +14,10 @@ st.write('''
 # Karandeep Singh
 ##### *Portfolio*''')
 
-col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.write(' ')
+image = Image.open('image.png')
+st.image(image, width=150)
 
-with col2:
-    st.image('streamlit_portfolio/portfolio-streamlit/image.png')
-
-with col3:
-    st.write(' ')
 
 st.markdown('## Summary', unsafe_allow_html=True)
 
@@ -25,6 +25,36 @@ st.info('''
 - As a dedicated Data Scientist, I bring a blend of technical expertise and strong soft skills to the table. Proficient in Python, R, and SQL, I excel in extracting, cleaning, and analyzing complex datasets to derive actionable insights.
 - Overall, I am a results-driven professional who is not only capable of delivering impactful data-driven solutions but also of fostering a collaborative and inclusive work environment conducive to innovation and growth.
 ''')
+
+st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+
+st.markdown("""
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #16A2CB;">
+  <a class="navbar-brand" href="#" target="_blank">Karandeep Singh</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link disabled" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#work-experience">Work Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#social-media">Social Media</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+""", unsafe_allow_html=True)
 
 
 def txt(a, b):
