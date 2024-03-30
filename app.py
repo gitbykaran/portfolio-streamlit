@@ -3,7 +3,7 @@ from PIL import Image
 
 st.set_page_config(
     page_title="My-Portfolio",
-    page_icon="🧊",
+    page_icon="💻",
     layout="centered",)
 
 with open("style.css") as f:
